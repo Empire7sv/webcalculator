@@ -27,9 +27,7 @@ const startButton  = document.querySelector('.start-button'),
     typeSite = document.querySelector('.type-site'),
     maxDeadline = document.querySelector('.max-deadline'),
     rangeDeadline = document.querySelector('.range-deadline'),
-    deadlineValue = document.querySelector('.deadline-value'),
-    checkboxLabel = document.querySelector('.checkbox-label'),
-    desktopTemplates = document.querySelector('#desktopTemplates');
+    deadlineValue = document.querySelector('.deadline-value');
 
 //склоние дней
 declOfNum = (n, titles) => {
@@ -111,12 +109,6 @@ priceCalculation = (elem) => {
 
 handlerCallBackForm = (event) => {
     const target = event.target;
-
-    if(desktopTemplates.checked || adapt.checked ){
-        checkboxLabel.textContent = 'Да'; 
-    }else{
-        checkboxLabel.textContent = 'Hет';
-    }
 
     if(adapt.checked){
         mobileTemplates.disabled = false;
